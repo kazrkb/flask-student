@@ -3,11 +3,10 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/")
-def student():
+def student_profile():
     return render_template(
-        "profile.html",
+        "studentProfile.html",
         name="Korim",
-        is_topper = "True",
-        subjects = ["Math", "Physics", "Chemistry"]
-        
+        is_topper = True,
+        subjects = ["Maths", "Physics", "Chemistry"]
     )

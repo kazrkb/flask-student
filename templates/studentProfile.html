@@ -12,12 +12,22 @@
     {% else %}
     <p>You need to work very hard</p>
     {% endif %}
+{% extends 'base.html' %}
 
-    <h3>Your Subjects are</h3>
+{% block title %}Student Profile{% endblock %}
+
+{% block content %}
+    <h1>Student Profile</h1>
+    <p>Name: {{ name }}</p>
+    {% if is_topper %}
+        <p>Status: Topper</p>
+    {% else %}
+        <p>Status: Regular</p>
+    {% endif %}
+    <h2>Subjects</h2>
     <ul>
         {% for subject in subjects %}
-        <li>{{subject}}</li>
+            <li>{{ subject }}</li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}

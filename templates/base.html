@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Student App{% endblock %}</title>
+</head>
+<body>
+    {% block header %}
+    <header style="background:#f0f0f0;padding:1em;text-align:center;">
+        <h1>Student Portal</h1>
+    </header>
+    {% endblock %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    {% block footer %}
+    <footer style="background:#f0f0f0;padding:1em;text-align:center;position:fixed;bottom:0;width:100%;">
+        <p>&copy; 2025 Student Portal</p>
+    </footer>
+    {% endblock %}
+</body>
+</html>
